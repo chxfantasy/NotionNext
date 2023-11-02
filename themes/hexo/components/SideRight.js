@@ -40,8 +40,8 @@ export default function SideRight(props) {
   const { locale } = useGlobal()
   return (
     <div id='sideRight' className={'space-y-4 lg:w-80 lg:pt-0 px-2 pt-4'}>
-      <InfoCard {...props} />
-      {CONFIG.WIDGET_ANALYTICS && <AnalyticsCard {...props} />}
+      
+      <Announcement post={notice}/>
 
       {showCategory && (
         <Card>
@@ -54,16 +54,19 @@ export default function SideRight(props) {
           />
         </Card>
       )}
+
+      <InfoCard {...props} />
+      {CONFIG.WIDGET_ANALYTICS && <AnalyticsCard {...props} />}
+      
       {showTag && (
         <Card>
           <TagGroups tags={tags} currentTag={currentTag} />
         </Card>
       )}
+      
       {CONFIG.WIDGET_LATEST_POSTS && latestPosts && latestPosts.length > 0 && <Card>
         <LatestPostsGroup {...props} />
       </Card>}
-
-      <Announcement post={notice}/>
 
       {BLOG.COMMENT_WALINE_SERVER_URL && BLOG.COMMENT_WALINE_RECENT && <HexoRecentComments/>}
 

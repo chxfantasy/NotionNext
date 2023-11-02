@@ -64,7 +64,7 @@ const Hero = props => {
                 </div>
 
                 {/* 首页导航大按钮 */}
-                {CONFIG.HOME_NAV_BUTTONS && <NavButtonGroup {...props} />}
+                {/* {CONFIG.HOME_NAV_BUTTONS && <NavButtonGroup {...props} />} */}
 
                 {/* 滚动按钮 */}
                 <div onClick={scrollToWrapper} className="z-10 cursor-pointer w-full text-center py-4 text-3xl absolute bottom-10 text-white">
