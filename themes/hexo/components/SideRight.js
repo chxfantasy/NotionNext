@@ -40,9 +40,7 @@ export default function SideRight(props) {
   const { locale } = useGlobal()
   return (
     <div id='sideRight' className={'space-y-4 lg:w-80 lg:pt-0 px-2 pt-4'}>
-      
       <Announcement post={notice}/>
-
       {showCategory && (
         <Card>
           <div className='ml-2 mb-1 '>
